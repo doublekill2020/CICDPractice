@@ -1,0 +1,6 @@
+#!/bin/bash
+
+docker run -dit --name nginx -p 8889:80 \
+-v  /home/tinker/nginx/conf/default.conf:/etc/nginx/conf.d/default.conf \
+-v /home/tinker/nginx/conf/gerrit.passwd:/etc/nginx/conf.d/gerrit.passwd \
+--link gerrit:gerrit nginx

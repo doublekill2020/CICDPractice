@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker run -dit --name gerrit -p 8888:8888 -p 29418:29418 \
+-v /tmp/data/gerrit:/home/docker/gerrit/review_site \
+-e AUTH_TYPE=HTTP openfrontier/gerrit
